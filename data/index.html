@@ -8,13 +8,25 @@
     </head>
     <body>
         <div class="topnav">
-            <h1>SENSOR READINGS (WEBSOCKET)</h1>
+            <h1>Sistema de Controle e Monitoramento de Nível</h1>
         </div>
         <div class="content">
+            <div class="main_informations">
+                <h2 id="informations_title">Sobre o sistema</h2>
+                <p class="informations">Nivel máximo: <span class="informations_value">30 cm</span></p>
+                <p class="informations">Nivel alto: <span class="informations_value">25 cm</span></p>
+                <p class="informations">Nivel baixo: <span class="informations_value">10 cm</span></p>
+            </div>
             <div class="card-grid">
                 <div class="card">
-                    <p class="card-title"><i class="fas fa-thermometer-threequarters" style="color:#059e8a;"></i> Nivel</p>
+                    <p class="card-title"><i style="color:#059e8a;"></i> Nivel</p>
                     <p class="reading"><span id="distancia"></span> cm</p>
+                </div>
+                <div class="card">
+                    <div class="card-grid">
+                        <p class="card-title">Estado da bomba</p>
+                        <p class="reading"><span id="estado_bomba"></span></p>
+                    </div>
                 </div>
             </div>
         </div>

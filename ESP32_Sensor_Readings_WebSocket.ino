@@ -6,8 +6,8 @@
 #include <Arduino_JSON.h>
 
 //wifi
-const char *ssid = "Speroto";
-const char *password = "bielzin123";
+const char *ssid = "SSID";
+const char *password = "PASSWORD";
 
 // Pinagem
 const int ledVermelho = 15;
@@ -128,6 +128,7 @@ void verificarBotao() {
 // Função para obter leituras do sensor
 String getSensorReadings() {
     readings["distancia"] = alturaTanque -  getDistance();
+    readings["estado_bomba"] = admOrder?"Ligado":"Desligado";
     String jsonString = JSON.stringify(readings);
     return jsonString;
 }
